@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:menu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Gyümölcsök" Height="450" Width="800">
     <DockPanel LastChildFill="False">
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_Fájl">
                 <MenuItem Header="_Megnyitás" Click="MenuItemOpen_Click"/>
+                <MenuItem Header="_Mentés" Click="MenuItemSave_Click"/>
                 <Separator/>
                 <MenuItem Header="_Kilépés" Click="MenuItemExit_Click"/>
             </MenuItem>
@@ -17,9 +18,9 @@
                 <MenuItem Header="_Névjegy" Click="MenuItemAbout_Click"/>
             </MenuItem>
         </Menu>
-        <ListBox Width="100"/>
-        <TextBlock TextWrapping="Wrap" Text="(Új elem)" Width="100"/>
-        <Button Content="Bevitel" Width="NaN" Height="50"/>
+        <ListBox x:Name="lb_1" Width="100"/>
+        <TextBox x:Name="tb_be" TextWrapping="Wrap" Text="(Új elem)" Width="100"/>
+        <Button Content="Bevitel" Width="NaN" Height="50" Click="Button_Click"/>
     </DockPanel>
 
 </Window>
